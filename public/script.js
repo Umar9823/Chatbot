@@ -10,10 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
             userInput.value = '';
             userInput.focus();
 
-            // Add typing indicator for the bot
             const typingMessage = displayMessage('Chatbot is typing...', 'bot', true);
             
-            // Simulated delay for bot response
+            
             setTimeout(() => {
                 sendMessageToBot(message, typingMessage);
             }, 1000);
@@ -33,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         chatMessages.appendChild(messageElement);
         chatMessages.scrollTop = chatMessages.scrollHeight;
         
-        return messageElement; // Return element for potential replacement
+        return messageElement; 
     }
 
     async function sendMessageToBot(message, typingMessage) {
@@ -47,9 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             const data = await response.json();
 
-            // Replace typing message with actual response
             typingMessage.textContent = data.response;
-            typingMessage.classList.remove('typing'); // Remove typing class
+            typingMessage.classList.remove('typing'); 
         } catch (error) {
             typingMessage.textContent = "Sorry, I couldn't respond. Please try again.";
             typingMessage.classList.remove('typing');

@@ -1,11 +1,10 @@
-/* Basic reset */
-* {
+/* Basic reset */* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Chat container */
+
 .chat-container {
     width: 90%;
     max-width: 600px;
@@ -18,7 +17,7 @@
     background-color: #f8f9fa;
 }
 
-/* Chat header */
+
 .chat-header {
     background-color: #007bff;
     color: white;
@@ -26,7 +25,7 @@
     text-align: center;
 }
 
-/* Chat messages area */
+
 .chat-messages {
     padding: 20px;
     height: 400px;
@@ -37,7 +36,7 @@
     gap: 15px;
 }
 
-/* Individual message bubbles */
+
 .message {
     padding: 10px 15px;
     border-radius: 8px;
@@ -56,7 +55,7 @@
     background-color: #e9ecef;
 }
 
-/* Typing bubble for chatbot */
+
 .message.typing {
     display: flex;
     align-items: center;
@@ -65,7 +64,7 @@
     opacity: 0.7;
 }
 
-/* Chat input area */
+
 .chat-input {
     display: flex;
     border-top: 1px solid #ddd;
@@ -95,7 +94,7 @@
     background-color: #0056b3;
 }
 
-/* Scrollbar styling for chat messages */
+
 .chat-messages::-webkit-scrollbar {
     width: 8px;
 }
@@ -109,7 +108,7 @@
     background: #f1f1f1;
 }
 
-/* Typing indicator styling */
+
 .typing-indicator {
     display: none;
     font-style: italic;
