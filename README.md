@@ -80,6 +80,3 @@ This project is a simple chatbot application built with HTML, CSS, and JavaScrip
 
 Contributions are welcome! If you have suggestions for improvements or new features, please create an issue or submit a pull request.
 
-## 📜 License
-
-This project is licensed under the MIT License.
