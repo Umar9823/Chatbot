@@ -54,4 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error sending message:', error);
         }
     }
+
+    document.getElementById('startChatBtn').addEventListener('click', function() {
+        document.getElementById('welcomeScreen').style.display = 'none';
+        document.getElementById('chatContainer').style.display = 'block';
+    });
 });
