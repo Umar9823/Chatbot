@@ -1,5 +1,5 @@
 
-# 🤖 Chatbot Project
+# 🤖 Multi-Language Chatbot
 
 This project is a simple chatbot application built with HTML, CSS, and JavaScript for the frontend, and Node.js with Express for the backend. The chatbot is designed to interact with users by responding to their messages using predefined responses based on keywords.
 
