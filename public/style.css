@@ -1,11 +1,10 @@
-/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Chat Container Styling */
+
 .chat-container {
     width: 90%;
     max-width: 600px;
@@ -18,7 +17,7 @@
     background: linear-gradient(135deg, #ece9e6, #ffffff);
 }
 
-/* Chat Header Styling */
+
 .chat-header {
     background: linear-gradient(135deg, #007bff, #0066cc);
     color: white;
@@ -28,7 +27,7 @@
     font-weight: bold;
 }
 
-/* Chat Messages Styling */
+
 .chat-messages {
     padding: 20px;
     height: 400px;
@@ -39,7 +38,7 @@
     gap: 10px;
 }
 
-/* User and Bot Message Styling */
+
 .message {
     padding: 12px 18px;
     border-radius: 10px;
@@ -61,7 +60,7 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Typing Indicator Styling */
+
 .typing-indicator {
     display: none;
     font-style: italic;
@@ -70,7 +69,7 @@
     margin: 10px 20px;
 }
 
-/* Chat Input Styling */
+
 .chat-input {
     display: flex;
     border-top: 1px solid #ddd;
@@ -99,7 +98,7 @@
     background-color: #004080;
 }
 
-/* Scrollbar Styling */
+
 .chat-messages::-webkit-scrollbar {
     width: 8px;
 }
@@ -113,7 +112,7 @@
     background: #f1f1f1;
 }
 
-/* Welcome Screen Styling */
+
 .welcome-screen {
     display: flex;
     flex-direction: column;
@@ -151,14 +150,14 @@
     background: linear-gradient(135deg, #ff8566, #ff6f61);
 }
 
-/* Adjust header icon */
+
 .chat-header h2 i {
     margin-right: 8px;
     font-size: 1.2em;
     vertical-align: middle;
 }
 
-/* Adjust send button icon */
+
 .chat-input button i {
     font-size: 1.2em;
     vertical-align: middle;
