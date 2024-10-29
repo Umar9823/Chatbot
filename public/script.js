@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatMessages = document.getElementById('chatMessages');
     const userInput = document.getElementById('userInput');
     const sendBtn = document.getElementById('sendBtn');
+    const welcomeScreen = document.getElementById('welcomeScreen');
+    const chatContainer = document.getElementById('chatContainer');
+    const typingIndicator = document.getElementById('typingIndicator');
 
     sendBtn.addEventListener('click', () => {
         const message = userInput.value.trim();
@@ -11,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
             userInput.focus();
 
             const typingMessage = displayMessage('Chatbot is typing...', 'bot', true);
-            
             
             setTimeout(() => {
                 sendMessageToBot(message, typingMessage);
@@ -55,8 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    document.getElementById('startChatBtn').addEventListener('click', function() {
-        document.getElementById('welcomeScreen').style.display = 'none';
-        document.getElementById('chatContainer').style.display = 'block';
+    document.getElementById('startChatBtn').addEventListener('click', () => {
+        welcomeScreen.style.display = 'none';
+        chatContainer.style.display = 'block';
     });
 });
