@@ -76,6 +76,20 @@ This project is a simple chatbot application built with HTML, CSS, and JavaScrip
 - Type your message into the input box and click "Send" or press Enter to submit.
 - The chatbot will respond based on the predefined responses or handle simple requests like asking for the current date or time.
 
+## 📸 Screenshots
+
+Below are some screenshots of the Multi-Language Chatbot in action:
+
+### Welcome Screen
+![Welcome Screen](public/chatbot1.png)
+
+### Chat Interface
+![Chat Interface](public/chatbot2.png)
+
+### Typing Indicator
+![Typing Indicator](public/chatbot3.png)
+
+
 ## 🤝 Contributing
 
 Contributions are welcome! If you have suggestions for improvements or new features, please create an issue or submit a pull request.
