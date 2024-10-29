@@ -1,6 +1,6 @@
 const natural = require('natural');
 
-// Predefined responses with multilingual keys
+
 const responses = {
     hello: {
         en: 'Hi there! How can I assist you today?',
@@ -34,7 +34,7 @@ const responses = {
     }
 };
 
-// Define message mappings to responses for multilingual phrases
+
 const messageMappings = {
     hello: ['hello', 'hi', 'नमस्ते', 'नमस्कार', 'ہیلو'],
     bye: ['bye', 'goodbye', 'अलविदा', 'गुडबाय', 'خدا حافظ', 'الوداع'],
@@ -42,7 +42,7 @@ const messageMappings = {
     how_are_you: ['how are you', 'कसे आहात', 'आप کیسے ہیں', 'तुम्ही कसे आहात', 'आप کیسے ہو']
 };
 
-// Detect language based on predefined keywords
+
 function detectLanguage(message) {
     if (/[नमस्ते|अलविदा|धन्यवाद|तुमची|माफ|कृपया]/.test(message)) return 'hi';
     if (/[नमस्कार|गुडबाय|मदत|पुनः|कशी]/.test(message)) return 'mr';
@@ -50,19 +50,19 @@ function detectLanguage(message) {
     return 'en';
 }
 
-// Generate a response based on detected language and message
+
 function generateBotResponse(message) {
     const detectedLanguage = detectLanguage(message);
     const lowerCaseMessage = message.toLowerCase();
 
-    // Check for common phrases in each language
+    
     for (const [responseKey, phrases] of Object.entries(messageMappings)) {
         if (phrases.some(phrase => lowerCaseMessage.includes(phrase))) {
             return responses[responseKey][detectedLanguage] || responses[responseKey].en;
         }
     }
 
-    // Date and time responses
+   
     if (/date/i.test(message)) {
         const currentDate = new Date().toLocaleDateString(detectedLanguage);
         return `Today's date is ${currentDate}.`;
@@ -71,7 +71,7 @@ function generateBotResponse(message) {
         return `The current time is ${currentTime}.`;
     }
 
-    // Default response if no match is found
+ 
     return responses.default[detectedLanguage] || responses.default.en;
 }
 
