@@ -1,70 +1,76 @@
-/* Basic reset */* {
+/* Basic Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
+/* Chat Container Styling */
 .chat-container {
     width: 90%;
     max-width: 600px;
     margin: 50px auto;
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
-    background-color: #f8f9fa;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
 }
 
-
+/* Chat Header Styling */
 .chat-header {
-    background-color: #007bff;
+    background: linear-gradient(135deg, #007bff, #0066cc);
     color: white;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
-
+/* Chat Messages Styling */
 .chat-messages {
     padding: 20px;
     height: 400px;
     overflow-y: auto;
-    background-color: #fff;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
-
+/* User and Bot Message Styling */
 .message {
-    padding: 10px 15px;
-    border-radius: 8px;
+    padding: 12px 18px;
+    border-radius: 10px;
     max-width: 75%;
-    font-size: 16px;
+    font-size: 0.9em;
     line-height: 1.4;
+    transition: all 0.3s ease;
 }
 
 .message.user {
     align-self: flex-end;
     background-color: #dcf8c6;
+    box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.1);
 }
 
 .message.bot {
     align-self: flex-start;
     background-color: #e9ecef;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
-.message.typing {
-    display: flex;
-    align-items: center;
-    color: #666;
+/* Typing Indicator Styling */
+.typing-indicator {
+    display: none;
     font-style: italic;
-    opacity: 0.7;
+    font-size: 0.85em;
+    color: #666;
+    margin: 10px 20px;
 }
 
-
+/* Chat Input Styling */
 .chat-input {
     display: flex;
     border-top: 1px solid #ddd;
@@ -75,26 +81,25 @@
     flex: 1;
     padding: 15px;
     border: none;
-    font-size: 16px;
-    border-radius: 0;
+    font-size: 1em;
     outline: none;
 }
 
 .chat-input button {
-    padding: 0 20px;
+    padding: 0 25px;
     border: none;
-    background-color: #007bff;
+    background: linear-gradient(135deg, #007bff, #0056b3);
     color: white;
-    font-size: 16px;
+    font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .chat-input button:hover {
-    background-color: #0056b3;
+    background-color: #004080;
 }
 
-
+/* Scrollbar Styling */
 .chat-messages::-webkit-scrollbar {
     width: 8px;
 }
@@ -108,16 +113,6 @@
     background: #f1f1f1;
 }
 
-
-.typing-indicator {
-    display: none;
-    font-style: italic;
-    font-size: 14px;
-    color: #666;
-    margin: 10px 20px;
-}
-
-
 /* Welcome Screen Styling */
 .welcome-screen {
     display: flex;
@@ -128,30 +123,43 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #f0f0f0;
-    padding: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    padding: 40px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
     text-align: center;
+    color: #fff;
 }
 
 .welcome-screen h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
+    margin-bottom: 25px;
+    font-size: 1.5em;
 }
 
 .welcome-screen button {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 12px 25px;
+    font-size: 1em;
     color: #fff;
-    background-color: #4CAF50;
+    background: linear-gradient(135deg, #ff6f61, #ff8566);
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .welcome-screen button:hover {
-    background-color: #45a049;
+    background: linear-gradient(135deg, #ff8566, #ff6f61);
+}
+
+/* Adjust header icon */
+.chat-header h2 i {
+    margin-right: 8px;
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+/* Adjust send button icon */
+.chat-input button i {
+    font-size: 1.2em;
+    vertical-align: middle;
 }
